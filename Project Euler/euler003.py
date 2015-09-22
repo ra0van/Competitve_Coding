@@ -38,7 +38,7 @@ def primeFactors(num):
 
 t = input()
 prev = -1
-for i in range(t):
+for i in xrange(t):
 	n = input()
 	li = primeFactors(n)
 	pn = max(li)
