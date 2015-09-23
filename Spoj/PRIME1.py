@@ -1,6 +1,6 @@
 #TLE
 import math
-def SieveOfEratosthenes(upperBound):
+def SieveOfEratosthenes(upperBound,prev=0):
 	# print "Se"
 	li = []
 	upperBoundSqrRoot = int(math.sqrt(upperBound))
