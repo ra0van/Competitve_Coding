@@ -1,9 +1,10 @@
 # Competitive_Coding
 
-Some simple data structures and standard algorithms -- implemented in c++ or python
+<h4> Algorithms and DataStructures </h4>
+Some simple data structures(and their operations) and standard algorithms(Most of them from [Introduction to Algorithms](https://mitpress.mit.edu/books/introduction-algorithms)) -- implemented in either c++ or python
 
-Soultions to programming problems across different websites like [SPOJ](http://www.spoj.com/),CodeChef,CodeForces,HackerEarth,HackerRank,CodeEval etc...
+<h4>Competitive Coding</h4>
+Soultions to programming problems across different websites like [SPOJ](http://www.spoj.com/),[CodeChef](http://www.codechef.com/),[CodeForces](www.codewars.com),[HackerEarth](https://www.hackerearth.com/),[HackerRank](https://www.hackerrank.com/), etc...
 
-Most of the solutions are written in c++ and python.
 
 
