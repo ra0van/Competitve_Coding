@@ -1,4 +1,4 @@
-# Practice_Online
+# Competitive_Coding
 
 Some simple data structures and standard algorithms -- implemented in c++ or python
 
