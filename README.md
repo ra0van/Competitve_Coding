@@ -8,3 +8,7 @@ Soultions to programming problems across different websites like [SPOJ](http://w
 
 
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/rajsherror404/competitve_coding/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
