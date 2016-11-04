@@ -1,7 +1,7 @@
 #!/bin/python
 
 #https://www.hackerrank.com/contests/w25/challenges/append-and-delete
-#10/12 passed 
+#11/12 passed 
 
 import sys
 
@@ -30,7 +30,7 @@ elif k >= len(s) + len(t):
     print "Yes"
 else:
     common = getCommonStart(s,t)
-    if len(common)>0 and (len(s)+len(t) -  2*len(common) == k):
+    if len(common)>0 and (len(s)+len(t) -  2*len(common) <= k):
         print "Yes"
     else:
         print "No"
