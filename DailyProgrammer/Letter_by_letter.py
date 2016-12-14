@@ -1,4 +1,4 @@
-/*
+'''
 Problem: https://www.reddit.com/r/dailyprogrammer/comments/5hy8sm/20161212_challenge_295_easy_letter_by_letter/
 Challenge : 295 [Easy]
 Change the a sentence to another sentence, letter by letter.
@@ -13,9 +13,9 @@ brake
 
 
 Bonus: made the char selection random and for input strings of different lengths
-*/
+'''
 
-# your code goes here
+
 import random
 op = 'sherlock holmes'
 ip = 'Matrix'
