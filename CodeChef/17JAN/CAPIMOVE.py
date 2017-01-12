@@ -1,28 +1,32 @@
-#TLE
-
 from sys import stdin,stdout
 for t in xrange(input()):
 	result = ''
-	n= int(raw_input().strip())
-	population = map(int,raw_input().strip().split())
-	pop_city_map = []
+	n= int(stdin.readline().strip())
+	population = map(int,stdin.readline().strip().split())
+	sort_pop = sorted(population)
+	pop_city_map = {}
+	pop_matrix = []
 	#print population,pop_city_map
-	for i in xrange(n):
-		pop_city_map.append([population[i]])
+	for city,pop in enumerate(population):
+		pop_city_map[str(pop)] = city+1
+		pop_matrix.append([pop])
+	# for i in xrange(n):
+	# 	pop_city_map.append([population[i]])
 	
 	for i in xrange(n-1):
-		a,b = map(int,raw_input().split())
-		pop_city_map[a-1].append(population[b-1])
-		pop_city_map[b-1].append(population[a-1])
+		a,b = map(int,stdin.readline().split())
+		pop_matrix[a-1].append(population[b-1])
+		pop_matrix[b-1].append(population[a-1])
 	
 	for i in xrange(n):
-		d = set(pop_city_map[i])
-		rem = list(set(population)-d)
-		if len(rem)==0:
-			result = result + ' ' + str(0)
-		else:
-			# print d,rem
-			result = result + ' ' + str(population.index(max(rem))+1)
-	print result.strip()
+		d = set(pop_matrix[i])
 
-		
+		for i in xrange(n):
+			val = sort_pop[n-1-i]
+
+			if val not in d:
+				result = result + ' ' + str(pop_city_map[str(val)])
+				break;
+		else:
+			result = result + ' 0'
+	stdout.write(result.strip()+'\n') 
