@@ -1,31 +1,33 @@
-#partially correct
 t = input()
 for i in range(t):
     n,k = map(int,raw_input().split())
+    #print n,k
     islands = []
     visited = [0]*k
     visited_count = 0
-    first = False
     for j in range(n):
-        needed = False
-        ingredient = list(set(map(int,raw_input().split())))
+        ingredient = map(int,raw_input().split())
+        ingredient = ingredient[1:]
         islands.append(ingredient)
-        if j==0:
-            if sum(visited) == k*(k+1)/2:
-                first = True
-                break
+    #print islands
+    for ingredient in islands:
+        needed = False
+        if sum(ingredient) == k*(k+1)/2:
+            visited_count+=1
+            visited = [1]*k
+            break
         for spice in ingredient:
             if visited[spice-1]==0:
                 visited[spice-1]=1
-                needed=True
+                needed = True
         if needed:
-            visited_count+=1
-    if first:
-        print 'some'
-    elif sum(visited) != k:
-        print 'sad'
-    else:
-        if visited_count ==n:
-            print 'all'
-        else:
+            visited_count +=1
+    #print visited
+    if sum(visited) == k:
+        if visited_count <n:
             print 'some'
+        else:
+            print 'all'
+    else:
+        print 'sad'
+ 
