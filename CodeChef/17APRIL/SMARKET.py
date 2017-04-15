@@ -1,4 +1,3 @@
-#WA for few inputs
 t = int(input())
 for idx in range(t):
   n,q = map(int,raw_input().split())
@@ -32,10 +31,13 @@ for idx in range(t):
     count = 0
     end = len(newDp)-1
     dip = False
+    #print newDp
     for j in range(end):
-      if newDp[j+1]<newDp[j]:
+      if newDp[j+1]<=newDp[j]:
         if newDp[j]>=k:
+          #print 'dip',newDp[j+1],newDp[j]
           count += 1
     if  newDp[j+1]>=k:
+        #print 'dip',newDp[j+1],newDp[j]
         count +=1 
     print count
