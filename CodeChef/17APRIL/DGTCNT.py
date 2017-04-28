@@ -1,14 +1,21 @@
 def isHated(num,hateList):
 	count = [0]*10
+	n = num
 	while num>0:
 		rem = num%10
 		num = num/10
 		count[rem]+=1
-	# print num,count
-	for i in xrange(10):
-		if count[i]==hateList[i]:
+
+	#comment
+	for i in str(n):
+		if count(int(i)) == hateList(int(i)):
 			return True
+	
 	return False
+	# print num,count
+	# 	for i in xrange(10):
+	# 		if count[i]==hateList[i]:
+	# 			return True
  
  
 t = int(input())
@@ -22,7 +29,7 @@ for idx in xrange(t):
 			allZero=False
 			break
 	if allZero:
-		count = l-r+1
+		count = +1
 	else:
 		for i in xrange(l,r+1):
 			# print i
