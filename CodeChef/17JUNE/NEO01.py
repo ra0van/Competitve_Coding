@@ -2,20 +2,29 @@ t = input()
 for _ in xrange(t):
   n  = input()
   a = map(int,raw_input().split())
-  s = []
-  t = []
+  neg = []
+  psum = 0
+  pcount = 0
   for i in a:
-    if i<0:
-      s.append(len(t) * sum(t))
-      s.append(i)
-      t = []
+    if i < 0:
+      neg.append(i)
     else:
-      t.append(i)
+      psum += i
+      pcount += 1
   
-  if len(t)>0:
-    s.append(len(t) * sum(t))
+  neg.sort(reverse=True)
+  total = 0
+  pval = psum * pcount
+  for negative in neg:
+    neg_sum = (psum+negative)*(pcount+1)
+    if neg_sum > pval:
+      pval = neg_sum
+      psum += negative
+      pcount += 1
+    else:
+      total += negative
 
-  print sum(s)
+  print total + (pval)
   
   
   
