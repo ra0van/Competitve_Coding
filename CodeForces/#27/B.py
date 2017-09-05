@@ -1,3 +1,4 @@
+#WA
 s = raw_input()
 f = s[:3]
 l = s[3:]
@@ -22,4 +23,6 @@ while sum(sf)!=sum(sl):
     
     repl += 1
 # print sf,sl
+if repl>3:
+    repl = 3
 print repl
